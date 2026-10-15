@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playball&family=Sorts+Mill+Goudy:ital@0;1&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>About Me</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="about-page">
+    
+    <div class="about-bg-fixed" id="js-about-bg"></div>
+
+    <script>
+        const bgElement = document.getElementById('js-about-bg');
+        window.addEventListener('scroll', () => {
+            // ページ全体のスクロールできる距離を正しく計算
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            if (maxScroll <= 0) return;
+            
+            // スクロールの割合（0〜1）を取得して、逆向きの数値を計算
+            const scrollPercent = window.scrollY / maxScroll;
+            const bgPositionValue = 100 - (scrollPercent * 100);
+            
+            // 背景の位置をリアルタイムに上書きして動かす
+            bgElement.style.backgroundPosition = `center ${bgPositionValue}%`;
+        });
+    </script>
+
+    <header class="header">
+        <!-- ヘッダー -->
+         <nav class="header-nav">
+            <a href="../index.html#">home</a>
+            <a href="../index.html#works">works</a>
+            <a href="../index.html#skills">skills</a>
+            <a href="#">about</a>
+            <a href="../index.html#contact">contact</a>
+         </nav>
+
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <!-- HERO -->
+             <div class="about-hero-content">
+                <h1>About</h1>
+             </div>
+        </section>
+
+        <section class="about-profile">
+            <!-- プロフィール -->
+             <div class="profile-box">
+                <img src="./image/profile.webp" alt="">
+                <div class="profile-content">
+                    <h3>白濱　蓮</h3>
+                    <p class="my-name">Ren Shirahama</p>
+                    <p>2002年3月生まれ／長崎県出身<br>前職では一般事務として働く中で、PCを使って業務を効率化<br>する方法を調べたり工夫したりすることに楽しさを感じ、<br>Web制作に興味を持つようになりました。<br>現在は職業訓練でWebデザインやコーディングを学び、<br>Webデザイナーを目指しています。</p>
+                    <p>好きなこと：ダンス | NARUTO | 猫 | お笑い | 読書</p>
+                </div>
+             </div>
+        </section>
+
+        <section class="about-feature">
+            <!-- 強み -->
+             <div class="feature-title">
+                <h1>蓮 Core</h1>
+                <p>私を形づくる、３つのスタンス</p>
+             </div>
+             <div class="feature-item item-01">
+                <img src="./image/feature1.webp" alt="">
+                <h2><span>01</span>泥に根を張る</h2>
+                <p class="sub-title">－粘り強く、学び続ける力－</p>
+                <p>
+                    「昨日の自分より強く」をモットーに、前職の一般事務でも未経験の業務やPCツールを自主的に学び、効率化に繋げてきました。Webデザインへの挑戦においても、難しいコードやデザインの壁に直面しても決して諦めず、一つひとつ課題を解決して3つのWebサイト制作まで形にしました。実務に入ってからも、新しい技術やトレンドを粘り強く学び続ける姿勢を大切にします。
+                </p>
+             </div>
+             <div class="feature-item item-02">
+                <img src="./image/feature2.webp" alt="">
+
+                <h2><span>02</span>自ら伸びる茎</h2>
+                <p class="sub-title">－自分で考え、工夫する力－</p>
+                <p>
+                    わからないことがあっても、まずは公式ドキュメントや参考事例を自分で調べ、解決する方法を工夫します。新しいことにも「まずはやってみよう」と挑戦し、試行錯誤しながらより良い方法を模索します。また、自分だけで抱え込んで判断が遅れることのないよう、必要な時は適切なタイミングで周囲に相談・共有し、より良い成果を出せるよう行動します。
+                </p>
+             </div>
+             <div class="feature-item item-03">
+                <img src="./image/feature3.webp" alt="">
+                <h2><span>03</span>水に揺れる葉</h2>
+                <p class="sub-title">－柔軟に対応する力－</p>
+                <p>
+                    前職の事務職で培った「相手の立場や状況を先回りして考える視点」を大切に、その人に合わせた柔軟な対応を心がけています。周囲と積極的にコミュニケーションをとり、クライアントやチームメンバーの意図や想いを深く汲み取りながらも、自分の意見や提案を持ち、協力して仕事を進めることを大切にしています。
+                </p>
+             </div>
+        </section>
+
+        <div class="scroll">
+            <span>scroll</span>
+        </div>
+
+        <section class="about-outro">
+            <!-- まとめ -->
+             <div class="outro-content">
+                <h3>自分らしい花を咲かせる</h3>
+                <p>現場での学びと経験を日々積み重ねながら、自分らしい強みを育て、<br>それぞれの持つ魅力や想いをデザインでまっすぐ伝えられるWebデザイナーへ。</p>
+             </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+            <div class="footer-content">
+                <p>
+                <a href="../index.html" class="ren-btn">蓮</a>
+                <small>&copy; 2026 Ren Shirahama, All rights reserved.</small>
+                </p>
+                <!-- ページトップに戻るボタン -->
+                <a href="#" class="bubble-btn top-btn">
+                    <span class="arrow">↑</span>
+                    Back to Top
+                </a>
+            </div>
+    </footer>
+</body>
+
+</html>

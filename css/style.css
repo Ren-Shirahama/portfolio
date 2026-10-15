@@ -1,0 +1,564 @@
+@charset "UTF-8";
+
+html {
+    scroll-behavior: smooth;
+}
+/*
+VARIABLES
+==================================================*/
+:root {
+    /*フォント*/
+    --font-base: "Zen Old Mincho", serif;
+    --font-title: "Playball", cursive;
+    --font-sub-en: "Sorts Mill Goudy", serif;
+
+    /*カラー*/
+    --pink: #FF9CC7;
+    --blue: #A9D7DD;
+    --dark: #636363;
+    --gray: #818181;
+}
+
+/*
+GENERAL STYLING
+==================================================*/
+body {
+    margin: 0;
+    background: #A9D7DD;
+    background-image: url(../image/top-bg.webp);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    color: white;
+    font-family: var(--font-base);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 0 0 auto;
+}
+
+a, button {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active,
+button:hover, button:focus, button:active {
+    background-color: transparent !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.bubble-btn {
+    display: flex;
+    color: #A9D7DD;
+    text-decoration: none;
+    font-family: var(--font-sub-en);
+    font-size: 24px;
+}
+
+.bubble-btn .arrow {
+    font-size: 32px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 7px;
+    
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.2) 60%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+    box-shadow: 
+      inset 0 20px 30px rgba(255, 255, 255, 0.55),
+      inset 10px 0 20px rgba(255, 255, 255, 0.2),
+      inset -10px -10px 30px rgba(0, 50, 100, 0.1),
+      0 10px 20px rgba(0, 50, 100, 0.15);
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(8px);
+    
+    animation: yura-small 3.5s ease-in-out infinite;
+}
+/*
+COMMON LAYOUT
+==================================================*/
+section {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+/*
+COMMON TEXT
+==================================================*/
+/*タイトル*/
+.section-title h2 {
+    font-family: var(--font-title);
+    font-size: 100px;
+    color: var(--pink);
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    text-shadow: 
+        0 0 2px  rgba(255, 255, 255, 1),
+        0 0 12px rgba(255, 255, 255, 0.9);
+}
+
+/*
+HEADER
+==================================================*/
+/*ヘッダー全体*/
+.header {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 10;
+}
+
+/*ナビゲーション全体*/
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+/*ナビゲーション*/
+.header-nav a {
+    font-family: var(--font-sub-en);
+    font-size: 26px;
+    color: white;
+}
+
+/*
+HERO
+==================================================*/
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    transform: translateY(100px);
+}
+
+/*タイトル*/
+.hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 120px;
+  color: var(--dark);
+  font-weight: 400;
+}
+
+/*サブタイトル*/
+.hero h2 {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 50px;
+  color: var(--gray);
+  font-weight: 400;
+}
+
+/*
+INTRO
+==================================================*/
+.intro {
+    padding: 150px;
+    color: var(--dark);
+}
+.intro-content {
+    width: 46%;
+    margin-left: auto;
+    text-align: left;
+}
+
+/*コピー*/
+.intro h3 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+/*
+WORKS
+==================================================*/
+.works {
+    padding: 170px 150px;
+    text-align: center;
+}
+
+/*Worksの箱*/
+.works-box {
+    margin: 0 auto;
+    padding: 30px 100px;
+    box-sizing: border-box;
+    background: linear-gradient(
+  to bottom,rgba(123, 152, 115, 0.7) 0%,
+    rgba(123, 152, 115, 0.2) 30%,
+    rgba(255, 255, 255, 0) 70% );
+}
+
+.workslist {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+    row-gap: 20px;
+    overflow: hidden;
+}
+
+/*作品リンク*/
+.workslist a {
+    color: var(--dark);
+    display: block;
+}
+
+.workslist a > div:first-child {
+    overflow: hidden;
+}
+
+/*画像*/
+.workslist img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.75;
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+.workslist a:hover img {
+    opacity: 1;
+    transform: scale(1.04);
+}
+
+/*作品タイトル*/
+.works-text {
+    margin-top: 10px;
+    text-align: left;
+    text-shadow: 
+        0 0 2px  rgba(255, 255, 255, 1),
+        0 0 12px rgba(255, 255, 255, 0.9);
+}
+.works-text p {
+    margin: 0;
+    font-weight: 600;
+}
+.works-text span {
+    font-family: var(--font-sub-en);
+    color: var(--gray);
+}
+
+/*
+SKILLS
+==================================================*/
+.skills {
+    position: relative;
+    padding: 1000px 100px 100px;
+}
+
+.skills-list {
+    position: relative;
+    width: 100%;
+    height: 1860px;
+}
+
+/*泡の共通設定*/
+.skills-item {
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.2) 60%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+    
+
+    box-shadow: 
+      inset 0 20px 30px rgba(255, 255, 255, 0.55),
+      inset 10px 0 20px rgba(255, 255, 255, 0.2),
+      inset -10px -10px 30px rgba(0, 50, 100, 0.1),
+      0 10px 20px rgba(0, 50, 100, 0.15);
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+
+/*泡の中のコンテンツ*/
+.skills-logo img {
+    filter: drop-shadow(0px 0px 1px rgba(65, 129, 152, .8)) 
+            drop-shadow(0px 0px 12px rgba(98, 189, 222, 0.8));
+}
+.skills-item span {
+    font-family: var(--font-sub-en);
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 
+        0 0 3px  rgb(65, 129, 152, 1),
+        0 0 12px rgba(65, 129, 152, 0.9);
+}
+.skills-item p {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    text-shadow: 
+       0 0 3px  rgba(65, 129, 152, 1),
+        0 0 12px rgba(65, 129, 152, 0.9);
+
+}
+
+/*スキル別の設定*/
+.skills-hc {
+    width: 517px;
+    height: 517px;
+    top: 0;
+    left: 0;
+     animation: yura-large 6.0s ease-in-out infinite;
+    animation-delay: 0s;
+}
+.skills-js {
+    width: 517px;
+    height: 517px;
+    top: 138px;
+    right: 0;
+    animation: yura-large 5.5s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
+.skills-wp {
+    width: 490px;
+    height: 490px;
+    top: 579px;
+    left: 7%;
+    animation: yura-medium 5.0s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+.skills-php {
+    width: 411px;
+    height: 411px;
+    top: 791px;
+    right: 14%;
+    animation: yura-medium 4.5s ease-in-out infinite;
+    animation-delay: 2.3s;
+}
+.skills-figma {
+    width: 475px;
+    height: 475px;
+    top: 1108px;
+    left: 15%;
+    animation: yura-small 3.8s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+.skills-canva {
+    width: 420px;
+    height: 420px;
+    top: 1444px;
+    right: 15%;
+    animation: yura-small 3.2s ease-in-out infinite;
+    animation-delay: 2.8s;
+}
+
+/*泡のアニメーション*/
+@keyframes yura-large {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-12px) scale(1.03, 0.97); }
+}
+
+@keyframes yura-medium {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-8px) scale(1.02, 0.98); }
+}
+
+@keyframes yura-small {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-4px) scale(1.01, 0.99); }
+}
+
+/*
+ABOUT
+==================================================*/
+.about {
+    padding: 0px 150px;
+}
+
+/*蓮の画像*/
+.about img {
+    display: block;
+    width: 165px;
+    height: auto;
+    margin: 0 auto;
+    transform: translateX(10px);
+}
+
+/*Aboutボックス*/
+.about-content {
+    width: 955px;
+    padding: 40px 60px;
+    margin: 30px auto;
+    text-align: center;
+    border-radius: 70px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.2) 60%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+    
+
+    box-shadow: 
+      inset 0 20px 30px rgba(255, 255, 255, 0.55),
+      inset 10px 0 20px rgba(255, 255, 255, 0.2),
+      inset -10px -10px 30px rgba(0, 50, 100, 0.1),
+      0 10px 20px rgba(0, 50, 100, 0.15);
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.about-content span {
+    display: block;
+    font-size: 30px;
+}
+
+.about-content p {
+    margin: 20px 0 0;
+}
+
+/*about meボタン*/
+.about a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: fit-content;
+    margin: 30px 200px 36px auto;
+    font-family: var(--font-sub-en);
+    color: white;
+    font-size: 24px;
+}
+
+.about-btn {
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 24px;
+    color: white;
+    margin: 50px auto; 
+}
+
+.about-btn .arrow {
+    font-size: 26px;
+}
+
+/*
+FOOTER
+==================================================*/
+.footer {
+    padding: 40px 60px 30px;
+    color: #A9D7DD;
+    box-sizing: border-box;
+    position: relative;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(10, 25, 35, 0.4) 40%,
+        rgba(5, 12, 18, 0.8) 100%
+    );
+    margin-top: auto;
+    width: 100%;
+    z-index: 2;
+}
+
+/*コンタクトボタン*/
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    color: var(--pink);
+    font-family: var(--font-title);
+    font-size: 50px;
+    width: 450px;
+    height: 80px;
+    margin: 0 auto;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0, 50, 100, 0.1);
+    transition: all 0.3s ease;
+}
+.contact a:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(0, 50, 100, 0.2);
+    opacity: 0.85;
+}
+
+/*フッター情報*/
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.footer-content p {
+    margin: 0;
+}
+
+/*蓮ボタン*/
+.ren-btn {
+    font-size: 50px;
+    color: #A9D7DD;
+}
+.footer-content small {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--font-sub-en);
+    font-size: 20px;
+}
+
+/*TOPに戻るボタン*/
+.top-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;              
+    font-size: 24px;
+}
