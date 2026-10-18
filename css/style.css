@@ -345,15 +345,15 @@ SKILLS
     animation: yura-large 5.5s ease-in-out infinite;
     animation-delay: 1.2s;
 }
-.skills-canva {
-    width: 490px;
-    height: 490px;
+.skills-photoshop {
+    width: 500px;
+    height: 500px;
     top: 580px;
     left: 4%;
     animation: yura-medium 5.0s ease-in-out infinite;
     animation-delay: 0.5s;
 }
-.skills-js {
+.skills-illustrator {
     width: 470px;
     height: 470px;
     top: 860px;
@@ -361,7 +361,7 @@ SKILLS
     animation: yura-medium 4.5s ease-in-out infinite;
     animation-delay: 2.3s;
 }
-.skills-wp {
+.skills-canva {
     width: 460px;
     height: 460px;
     top: 1180px;
@@ -369,7 +369,7 @@ SKILLS
     animation: yura-small 3.8s ease-in-out infinite;
     animation-delay: 1.5s;
 }
-.skills-php {
+.skills-js {
     width: 450px;
     height: 450px;
     top: 1480px;
@@ -378,7 +378,7 @@ SKILLS
     animation-delay: 2.8s;
 }
 
-.skills-photoshop {
+.skills-wp {
     width: 440px;
     height: 440px;
     top: 1800px;
@@ -387,7 +387,7 @@ SKILLS
     animation-delay: 1.0s;
 }
 
-.skills-illustrator {
+.skills-php {
     width: 440px;
     height: 440px;
     top: 2100px;
