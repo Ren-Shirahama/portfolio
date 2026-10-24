@@ -216,6 +216,8 @@ WORKS
   to bottom,rgba(123, 152, 115, 0.7) 0%,
     rgba(123, 152, 115, 0.2) 30%,
     rgba(255, 255, 255, 0) 70% );
+    height: 800px;
+    overflow-y: auto;
 }
 
 .workslist {

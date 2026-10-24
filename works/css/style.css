@@ -359,6 +359,11 @@ HERO
     height: auto;
 }
 
+.work-img .banner {
+    width: 600px;
+    height: auto;
+}
+
 /*
 ページボタン
 ==================================================*/
