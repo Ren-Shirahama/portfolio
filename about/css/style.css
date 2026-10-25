@@ -128,6 +128,7 @@ a, button {
 /*
 HEADER
 ==================================================*/
+/*ヘッダー全体*/
 .header {
     position: fixed;
     top: 50px;
@@ -135,17 +136,63 @@ HEADER
     z-index: 10;
 }
 
+/*ナビゲーション全体*/
 .header-nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: flex-end;
     gap: 20px;
 }
 
+/*ナビゲーション*/
 .header-nav a {
     font-family: var(--font-sub-en);
     font-size: 26px;
     color: white;
+    text-shadow: 
+        0 0 2px  rgb(95, 95, 95),
+        0 0 12px rgba(95, 95, 95, 0.9);
+}
+
+.header-nav a:hover {
+    color: var(--pink);
+    text-shadow: 
+        0 0 2px  rgb(255, 255, 255),
+        0 0 12px rgba(255, 255, 255, 0.9);
+}
+
+/*ドロップダウンメニュー*/
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: 100%;
+    width: 260px;
+    background-color: rgba(205, 237, 250, 0.891);
+    box-shadow: 0 0 2px  rgb(255, 255, 255),
+        0 0 12px rgba(255, 255, 255, 0.9);
+    padding: 10px 0;
+    z-index: 100;
+    transform-origin: left center;
+    border-radius: 2px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 20px;
+    color: var(--dark);
+    font-family: var(--font-base);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    text-shadow: 
+        0 0 2px  rgb(255, 255, 255),
+        0 0 12px rgba(255, 255, 255, 0.9);
 }
 
 /*

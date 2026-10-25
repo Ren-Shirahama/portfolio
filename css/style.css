@@ -120,6 +120,35 @@ COMMON TEXT
         0 0 2px  rgba(255, 255, 255, 1),
         0 0 12px rgba(255, 255, 255, 0.9);
 }
+/*
+LOADING
+================================================ */
+#loading {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading p {
+  color: #999;
+  font-size: 2rem;
+}
+
+/* 霧スクリーン */
+#loading-screen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(245,245,245,1) 100%);
+  z-index: 9998;
+}
 
 /*
 HEADER
@@ -135,7 +164,7 @@ HEADER
 /*ナビゲーション全体*/
 .header-nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: flex-end;
     gap: 20px;
 }
@@ -145,6 +174,50 @@ HEADER
     font-family: var(--font-sub-en);
     font-size: 26px;
     color: white;
+    text-shadow: 
+        0 0 2px  rgb(95, 95, 95),
+        0 0 12px rgba(95, 95, 95, 0.9);
+}
+
+.header-nav a:hover {
+    color: var(--pink);
+    text-shadow: 
+        0 0 2px  rgb(255, 255, 255),
+        0 0 12px rgba(255, 255, 255, 0.9);
+}
+
+/*ドロップダウンメニュー*/
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: 100%;
+    width: 260px;
+    background-color: rgba(205, 237, 250, 0.891);
+    box-shadow: 0 0 2px  rgb(255, 255, 255),
+        0 0 12px rgba(255, 255, 255, 0.9);
+    padding: 10px 0;
+    z-index: 100;
+    transform-origin: left center;
+    border-radius: 2px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 20px;
+    color: var(--dark);
+    font-family: var(--font-base);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    text-shadow: 
+        0 0 2px  rgb(255, 255, 255),
+        0 0 12px rgba(255, 255, 255, 0.9);
 }
 
 /*
@@ -205,10 +278,14 @@ WORKS
 .works {
     padding: 170px 150px;
     text-align: center;
+    position: relative;
+    height: auto;
 }
 
 /*Worksの箱*/
 .works-box {
+    height: 100vh;
+    height: 100dvh;
     margin: 0 auto;
     padding: 30px 100px;
     box-sizing: border-box;
@@ -217,7 +294,11 @@ WORKS
     rgba(123, 152, 115, 0.2) 30%,
     rgba(255, 255, 255, 0) 70% );
     height: 800px;
-    overflow-y: auto;
+    overflow-y: hidden;
+    scroll-behavior: auto;
+}
+html {
+    scrollbar-gutter: stable;
 }
 
 .workslist {
@@ -245,7 +326,8 @@ WORKS
     height: auto;
     opacity: 0.75;
     transform: scale(1);
-    transition: all 0.5s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    will-change: transform;
 }
 
 .workslist a:hover img {

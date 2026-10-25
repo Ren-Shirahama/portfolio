@@ -17,20 +17,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Playball&family=Sorts+Mill+Goudy:ital@0;1&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <title>蓮 Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 <body>
+    <!-- ローディング画面 -->
+    <div id="loading">
+        <p>Loading...</p>
+        <div id="loading-screen"></div>
+    </div>
     <header class="header">
         <!-- ヘッダー -->
          <nav class="header-nav">
             <a href="#">home</a>
-            <a href="#works">works</a>
+            <div class="dropdown">
+                <a href="#works" class="dropdown-trigger">works</a>
+                <div class="dropdown-menu">
+                    <a href="./works/neko.html">-日向ねこクリニック</a>
+                    <a href="./works/shift.html">-SHIFT DANCE STUDIO</a>
+                    <a href="./works/ren.html">-蓮 Portfolio</a>
+                    <a href="./works/renretouch.html">-蓮画像のレタッチ</a>
+                    <a href="./works/echelon.html">-ÉCHELON</a>
+                    <a href="./works/silka.html">-SILKA Veil</a>
+                    <a href="./works/bunnybites.html">-BUNNY BITES</a>
+                    <a href="./works/beyondbridge.html">-Beyond Bridge</a>
+                    <a href="./works/room203.html">-ROOM 203</a>
+                </div>
+            </div>
             <a href="#skills">skills</a>
             <a href="./about/about.html">about</a>
             <a href="#contact">contact</a>
          </nav>
-
     </header>
 
     <main>
@@ -75,22 +93,22 @@
                             <span>Website</span>
                         </div>
                     </a>
-                    <a href="works/room203.html">
-                        <div>
-                            <img src="image/works3.webp" alt="ROOM 203">
-                        </div>
-                        <div class="works-text">
-                            <p>ROOM 203</p>
-                            <span>Flyer</span>
-                        </div>
-                    </a>
                     <a href="works/ren.html">
                         <div>
-                            <img src="image/works4.webp" alt="蓮 Portfolio">
+                            <img src="image/works3.webp" alt="蓮 Portfolio">
                         </div>
                         <div class="works-text">
                             <p>蓮 Portfolio</p>
                             <span>Website</span>
+                        </div>
+                    </a>
+                    <a href="works/renretouch.html">
+                        <div>
+                            <img src="image/works4.webp" alt="蓮 Portfolio">
+                        </div>
+                        <div class="works-text">
+                            <p>蓮画像のレタッチ</p>
+                            <span>Photo Retouching</span>
                         </div>
                     </a>
                     <a href="works/echelon.html">
@@ -102,33 +120,51 @@
                             <span>Banner</span>
                         </div>
                     </a>
-                    <a href="works/bunnybites.html">
-                        <div>
-                            <img src="image/works6.webp" alt="BUNNY BITES">
-                        </div>
-                        <div class="works-text">
-                            <p>BUNNY BITES</p>
-                            <span>Logo</span>
-                        </div>
-                    </a>
                     <a href="works/silka.html">
                         <div>
-                            <img src="image/works7.webp" alt="SILKA Veil">
+                            <img src="image/works6.webp" alt="SILKA Veil">
                         </div>
                         <div class="works-text">
                             <p>SILKA Veil</p>
                             <span>Banner</span>
                         </div>
                     </a>
+                    <a href="works/bunnybites.html">
+                        <div>
+                            <img src="image/works7.webp" alt="BUNNY BITES">
+                        </div>
+                        <div class="works-text">
+                            <p>BUNNY BITES</p>
+                            <span>Logo</span>
+                        </div>
+                    </a>
+                    <a href="works/beyondbridge.html">
+                        <div>
+                            <img src="image/works8.webp" alt="Beyond Bridge">
+                        </div>
+                        <div class="works-text">
+                            <p>Beyond Bridge</p>
+                            <span>Business Card</span>
+                        </div>
+                    </a>
+                    <a href="works/room203.html">
+                        <div>
+                            <img src="image/works9.webp" alt="ROOM 203">
+                        </div>
+                        <div class="works-text">
+                            <p>ROOM 203</p>
+                            <span>Flyer</span>
+                        </div>
+                    </a>
                 </div>
-             </div>
+            </div>
         </section>
-
+        
         <section class="skills">
             <!-- Skills -->
-             <div class="section-title">
+            <div class="section-title">
                 <h2 id="skills">Skills</h2>
-             </div>
+            </div>
 
              <div class="skills-list">
                 <article class="skills-item skills-hc">
@@ -182,7 +218,7 @@
                     </div>
                     <span>JavaScript</span>
                     <p>
-                        基本的な文法を理解したうえで、ハンバーガーメニューやスライダーなど、Webサイトに動きやアニメーションをつける実装を学習中です。
+                        基本的な文法を学習し、スライダーやローディングアニメーション、スクロール連動の動きなど、Webサイトに動きをつける実装に取り組んでいます。
                     </p>
                 </article>
                 <article class="skills-item skills-wp">
