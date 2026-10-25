@@ -26,7 +26,7 @@ GENERAL STYLING
 body {
     margin: 0;
     background-color: #A9D7DD;
-    background-image: url(../image/work-bg.webp);
+    /*background-image: url(../image/work-bg.webp);*/   
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -163,7 +163,7 @@ HEADER
 /*ナビゲーション全体*/
 .header-nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: flex-end;
     gap: 20px;
 }
@@ -173,6 +173,50 @@ HEADER
     font-family: var(--font-sub-en);
     font-size: 26px;
     color: white;
+    text-shadow: 
+        0 0 2px  rgb(95, 95, 95),
+        0 0 12px rgba(95, 95, 95, 0.9);
+}
+
+.header-nav a:hover {
+    color: var(--pink);
+    text-shadow: 
+        0 0 2px  rgb(255, 255, 255),
+        0 0 12px rgba(255, 255, 255, 0.9);
+}
+
+/*ドロップダウンメニュー*/
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: 100%;
+    width: 260px;
+    background-color: rgba(205, 237, 250, 0.891);
+    box-shadow: 0 0 2px  rgb(255, 255, 255),
+        0 0 12px rgba(255, 255, 255, 0.9);
+    padding: 10px 0;
+    z-index: 100;
+    transform-origin: left center;
+    border-radius: 2px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 20px;
+    color: var(--dark);
+    font-family: var(--font-base);
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    text-shadow: 
+        0 0 2px  rgb(255, 255, 255),
+        0 0 12px rgba(255, 255, 255, 0.9);
 }
 
 /*
@@ -215,6 +259,14 @@ HERO
         0 0 12px rgba(255, 255, 255, 0.9);
 }
 
+.work-bb .work-hero {
+    background-color: #002b4f;
+}
+
+.work-retouch .work-hero-content img {
+    object-position: center bottom;
+}
+
 /*
 モックアップエリア
 ==================================================*/
@@ -240,6 +292,11 @@ HERO
 .mockup .sp {
     width: 176px;
     height: auto;
+}
+
+.intro-design img {
+    width: auto;
+    height: 500px;
 }
 
 /*制作期間*/
@@ -354,14 +411,10 @@ HERO
     height: auto;
 }
 
-.work-img .flyer {
-    width: calc(100% - 300px);
+.work-img .bs-card {
+    width: 500px;
     height: auto;
-}
-
-.work-img .banner {
-    width: 600px;
-    height: auto;
+    background-color: white;
 }
 
 /*

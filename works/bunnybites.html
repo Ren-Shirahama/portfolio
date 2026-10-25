@@ -23,13 +23,25 @@
     <header class="header">
         <!-- ヘッダー -->
          <nav class="header-nav">
-            <a href="../index.html#">home</a>
-            <a href="../index.html#works">works</a>
-            <a href="../index.html#skills">skills</a>
-            <a href="../about/about.html">about</a>
+            <a href="#">home</a>
+            <div class="dropdown">
+                <a href="#works" class="dropdown-trigger">works</a>
+                <div class="dropdown-menu">
+                    <a href="./works/neko.html">-日向ねこクリニック</a>
+                    <a href="./works/shift.html">-SHIFT DANCE STUDIO</a>
+                    <a href="./works/ren.html">-蓮 Portfolio</a>
+                    <a href="./works/renretouch.html">-蓮画像のレタッチ</a>
+                    <a href="./works/echelon.html">-ÉCHELON</a>
+                    <a href="./works/silka.html">-SILKA Veil</a>
+                    <a href="./works/bunnybites.html">-BUNNY BITES</a>
+                    <a href="./works/beyondbridge.html">-Beyond Bridge</a>
+                    <a href="./works/room203.html">-ROOM 203</a>
+                </div>
+            </div>
+            <a href="#skills">skills</a>
+            <a href="./about/about.html">about</a>
             <a href="#contact">contact</a>
          </nav>
-
     </header>
 
     <main>
@@ -42,6 +54,10 @@
         </section>
 
         <section class="work-intro">
+            <div class="intro-design">
+            <!-- デザイン画像 -->
+             <img src="./image/bunnybites.webp" alt="BUNNY BITES">
+            </div>
              <div class="intro-content">
                 <div class="duration">
                     <h2>制作期間</h2>
@@ -110,14 +126,9 @@
              </div>
         </section>
 
-        <section class="work-img">
-            <!-- デザイン画像 -->
-             <img src="./image/bunnybites.webp" alt="BUNNY BITES" class="flyer">
-        </section>
-
         <section class="work-pagination">
-            <a href="./echelon.html" class="btn-box"><span>←</span>Prev</a>
-            <a href="./silka.html" class="btn-box">Next<span>→</span></a>
+            <a href="./silka.html" class="btn-box"><span>←</span>Prev</a>
+            <a href="./beyondbridge.html" class="btn-box">Next<span>→</span></a>
         </section>
     </main>
     <footer class="footer">
